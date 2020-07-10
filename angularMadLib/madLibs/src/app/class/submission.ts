@@ -1,4 +1,5 @@
-export class InputObject {
+export class Submission {
+    id: number;
     noun1: string;
     noun2: string;
     noun3: string;
@@ -11,5 +12,7 @@ export class InputObject {
     adjective2: string;
     adjective3: string;
     adjective4: string;
+    adverb1: string;
+    adverb2: string;
 
 }

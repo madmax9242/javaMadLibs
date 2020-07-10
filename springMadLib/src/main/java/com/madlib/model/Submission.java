@@ -1,8 +1,13 @@
 package com.madlib.model;
+import javax.persistence.*;
 
+@Entity
+@SequenceGenerator(name = "submission_seq", initialValue = 101)
 public class Submission {
 	
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "submission_seq")
+	private Integer id;
 	private String noun1;
 	private String noun2;
 	private String noun3;
@@ -22,7 +27,7 @@ public class Submission {
 		
 	}
 
-	public Submission(int id, String noun1, String noun2, String noun3, String noun4, String verb1, String verb2, String verb3,
+	public Submission(Integer id, String noun1, String noun2, String noun3, String noun4, String verb1, String verb2, String verb3,
 			String verb4, String adjective1, String adjective2, String adjective3, String adjective4, String adverb1,
 			String adverb2) {
 		super();
@@ -49,7 +54,7 @@ public class Submission {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
