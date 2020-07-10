@@ -50,7 +50,7 @@ public class Submission {
 	
 	
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
