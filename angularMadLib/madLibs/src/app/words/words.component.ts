@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { InputObject } from '../class/inputObject';
+import { Submission } from '../class/submission';
 import { NgForm, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class WordsComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private inputObject: InputObject, private http: HttpClientModule) { 
+  constructor(private formBuilder: FormBuilder, private submission: Submission, private http: HttpClientModule) { 
 
 
   }

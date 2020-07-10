@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Submission } from '../class/submission';
 
 @Component({
   selector: 'app-stories',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private submission: Submission) { }
 
   ngOnInit(): void {
+    Submission: this.submission;
   }
 
 }
