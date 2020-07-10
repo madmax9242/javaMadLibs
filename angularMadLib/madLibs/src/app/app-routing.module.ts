@@ -5,6 +5,7 @@ import { WordsComponent } from './words/words.component';
 
 
 const routes: Routes = [
+  // { path: '*', component: WordsComponent },
   { path: 'stories', component: StoriesComponent },
   {path: 'input', component: WordsComponent}
 ];

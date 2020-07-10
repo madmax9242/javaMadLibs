@@ -1,46 +1,63 @@
 <div class="container shadow bg-light p-2 my-5">
-	<!-- EVENT CREATION -->
+	<!-- SUBMISSION CREATION -->
 	<div class="container">
 		<div class="row">
 			<div class="col-6 mx-auto">
-				<h2 class="display-4 text-center m-4">Add an Event</h2>
-				<form (ngSubmit)="createInput()" #thisForm="ngForm">
+				<h2 class="display-4 text-center m-4">Fill out the form with the correct types of words</h2>
+				<form (ngSubmit)="createSubmission()" #thisForm="ngForm">
 					<!-- INPUT FIELDS -->
 					<div class="form-group">
-						<input [(ngModel)]="event.eventName" #eventName="ngModel" name="inputEventName" id="inputEventName" type="text" placeholder="Event Name" class="form-control border-0 shadow px-4" required>
+						<input [(ngModel)]="submission.noun1" #submissionNoun1="ngModel" name="inputNoun1" id="inputNoun1" type="text" placeholder="Noun" class="form-control border-0 shadow px-4" required>
 					</div>
 					<div class="form-group">
-						<input [(ngModel)]="event.eventDescription" #eventDescription="ngModel" name="inputEventDescription" id="inputEventDescription" type="text" placeholder="Event Description" class="form-control border-0 shadow px-4" required>
+						<input [(ngModel)]="submission.noun2" #submissionNoun2="ngModel" name="inputNoun2" id="inputNoun3" type="text" placeholder="Noun" class="form-control border-0 shadow px-4" required>
 					</div>
 					<div class="form-group">
-						<input [(ngModel)]="event.eventLocation" #eventLocation="ngModel" name="inputEventLocation" id="inputEventLocation" type="text" placeholder="Event Location" class="form-control border-0 shadow px-4" required>
+						<input [(ngModel)]="submission.noun3" #submissionNoun3="ngModel" name="inputNoun3" id="inputNoun3" type="text" placeholder="Noun" class="form-control border-0 shadow px-4" required>
 					</div>
 					<div class="form-group">
-						<input [(ngModel)]="event.dateTime" #dateTime="ngModel" name="inputDateTime" id="inputDateTime" type="datetime-local" class="form-control border-0 shadow px-4" required>
+						<input [(ngModel)]="submission.noun4" #submissionNoun4="ngModel" name="inputNoun4" id="inputNoun4" type="text" placeholder="Noun" class="form-control border-0 shadow px-4" required>
+                    </div>
+
+                    <div class="form-group">
+						<input [(ngModel)]="submission.verb1" #submissionVerb1="ngModel" name="inputVerb1" id="inputVerb1" type="text" placeholder="Verb" class="form-control border-0 shadow px-4" required>
 					</div>
 					<div class="form-group">
-						<select [(ngModel)]="event.eventType" #eventType="ngModel" name="inputEventType" id="inputEventType" class="form-control border-0 shadow px-4">
-							<option value="Generic Event">Generic Event</option>
-							<option value="Outdoors">Outdoors</option>
-							<option value="Bar">Bar</option>
-							<option value="Brunch">Brunch</option>
-							<option value="Party">Party</option>
-							<option value="Game Night">Game Night</option>
-							<option value="Hootenanny">Hootenanny</option>
-						</select>
+						<input [(ngModel)]="submission.verb2" #submissionVerb2="ngModel" name="inputVerb2" id="inputVerb2" type="text" placeholder="Verb" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.verb3" #submissionVerb3="ngModel" name="inputVerb3" id="inputVerb3" type="text" placeholder="Verb" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.verb4" #submissionVerb4="ngModel" name="inputVerb4" id="inputVerb4" type="text" placeholder="Verb" class="form-control border-0 shadow px-4" required>
+                    </div>
+                    
+                    <div class="form-group">
+						<input [(ngModel)]="submission.adjective1" #submissionAdjective1="ngModel" name="inputAdjective1" id="inputAdjective1" type="text" placeholder="Adjective" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.adjective2" submissionAdjective2="ngModel" name="inputAdjective2" id="inputAdjective2" type="text" placeholder="Adjective" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.adjective3" #submissionAdjective3="ngModel" name="inputAdjective3" id="inputAdjective3" type="text" placeholder="Adjective" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.adjective4" #submissionAdjective4="ngModel" name="inputAdjective4" id="inputAdjective4" type="text" placeholder="Adjective" class="form-control border-0 shadow px-4" required>
+                    </div>
+                    
+                    <div class="form-group">
+						<input [(ngModel)]="submission.adverb1" #submissionAdj3="ngModel" name="inputAdverb1" id="inputAdverb1" type="text" placeholder="Adverb" class="form-control border-0 shadow px-4" required>
+					</div>
+					<div class="form-group">
+						<input [(ngModel)]="submission.adverb2" #submissionAdj4="ngModel" name="inputAdverb2" id="inputAdverb2" type="text" placeholder="Adverb" class="form-control border-0 shadow px-4" required>
 					</div>
 
 					<!-- BUTTONS -->
 					<div class="container col-8 my-5">
-						<button class="btn btn-success btn-block shadow" type="submit">Add</button>
+						<button class="btn btn-success btn-block shadow" type="submit">Submit</button>
 						<button class="btn btn-warning btn-block shadow" type="reset">Reset</button>
 					</div>
 				</form>
-
-				<!-- ROUTING -->
-				<!-- <div class="container col-8 my-4">
-					<button class="btn btn-primary btn-block shadow" type="button" [routerLink]="['/profile']" routerLinkActive="router-link-active">My Profile</button>
-				</div> -->
 			</div>
 		</div>
 	</div>
