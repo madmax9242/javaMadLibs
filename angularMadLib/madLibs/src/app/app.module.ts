@@ -1,8 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgForm, FormsModule, FormBuilder } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { Submission } from './class/submission';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,11 +14,9 @@ import { WordsComponent } from './words/words.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    AppRoutingModule
   ],
-  providers: [HttpClientModule, FormsModule, NgForm, Submission],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
